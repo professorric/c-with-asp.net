@@ -1,0 +1,59 @@
+@model List<_20doorchallenge.Models.Door>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Door Challenge</title>
+    <style>
+        .door {
+            display: inline-block;
+            width: 50px;
+            height: 100px;
+            margin: 5px;
+            background-color: gray;
+            text-align: center;
+            vertical-align: top;
+            font-size: 18px;
+        }
+
+            .door.open {
+                background-color: green;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+    <h1>5 Door Challenge</h1>
+
+    <!-- Display Pass Count -->
+    <p>Current Pass: @ViewData["PassCount"]</p>
+
+    <!-- Display the doors' states -->
+    <div>
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <div class="door @(Model[i].IsOpen ? "open" : "")">
+                @if (Model[i].IsOpen)
+                {
+                    @:Open
+                }
+                else
+                {
+                    @:Closed
+                }
+            </div>
+        }
+    </div>
+
+    <!-- Button to trigger the toggle logic -->
+    <form method="post" asp-action="Toggle">
+        <!-- Disable the button after 5 passes -->
+        <button type="submit" @(ViewData["PassCount"] != null && (int)ViewData["PassCount"] >= 5 ? "disabled" : "")>
+            Next Pass
+        </button>
+    </form>
+
+</body>
+</html>
