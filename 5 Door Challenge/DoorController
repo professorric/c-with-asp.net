@@ -1,0 +1,51 @@
+using Microsoft.AspNetCore.Mvc;
+using _20doorchallenge.Models;
+
+namespace _20doorchallenge.Controllers
+{
+    public class DoorController : Controller
+    {
+        private static List<Door> doors = new List<Door>();
+        private static int passCount = 0;
+
+        public DoorController()
+        {
+            // Initialize the doors (only needed once when the app starts)
+            if (doors.Count == 0)
+            {
+                for (int i = 1; i <= 5; i++)  // Initialize only 5 doors
+                {
+                    doors.Add(new Door { IsOpen = false, State = "Close" });
+                }
+            }
+        }
+
+        [HttpGet]
+        public IActionResult Index()
+        {
+            return View(doors); // Return the doors state to the view
+        }
+
+        [HttpPost]
+        public IActionResult Toggle()
+        {
+            if (passCount < 5) // Check if we have passed less than 5 times
+            {
+                passCount++;
+
+                // Run the appropriate pass based on the count
+                for (int i = 1; i <= doors.Count; i++)
+                {
+                    if (i % passCount == 0) // Toggle every 'passCount' door
+                    {
+                        doors[i - 1].IsOpen = !doors[i - 1].IsOpen; // Toggle the door state
+                        doors[i - 1].State = doors[i - 1].IsOpen ? "Open" : "Close";
+                    }
+                }
+            }
+
+            ViewData["PassCount"] = passCount;  // Display the current pass count
+            return View("Index", doors);
+        }
+    }
+}
