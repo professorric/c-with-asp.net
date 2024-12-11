@@ -23,3 +23,22 @@ Explanation:
 
 At the end, the doors that have been toggled an odd number of times will remain open, and those toggled an even number of times will remain closed.
 
+
+Step-by-Step Guide on How to Implement the 5 Door Challenge in ASP.NET Core MVC Using C#
+
+Step 1: Create a New ASP.NET Core MVC Project
+1.	Open Visual Studio:
+     o	If you don't have Visual Studio installed, you can download it from here.
+2.	Create a New Project:
+     o	Select Create a new project.
+     o	Choose ASP.NET Core Web Application.
+     o	Click Next.
+3.	Configure Your Project:
+     o	Name the project (e.g., TwentyDoorChallenge).
+     o	Choose the location where you want to save the project.
+     o	Click Create.
+4.	Select Template:
+     o	Choose the Web Application (Model-View-Controller) template.
+     o	Make sure .NET Core and ASP.NET Core version is selected correctly.
+     o	Click Create.
+
