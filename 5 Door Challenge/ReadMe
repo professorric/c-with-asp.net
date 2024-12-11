@@ -42,3 +42,40 @@ Step 1: Create a New ASP.NET Core MVC Project
      o	Make sure .NET Core and ASP.NET Core version is selected correctly.
      o	Click Create.
 
+Step 2: Create the Door Model
+
+1.	Add a Door Model:
+     o	In the Models folder, right-click and select Add -> Class.
+     o	Name the class Door.cs.
+     o	Add the following code to represent the state of each door:
+
+
+Step 3: Create the Controller
+1.	Add a Door Controller:
+     o	Right-click on the Controllers folder and select Add -> Controller.
+     o	Choose MVC Controller - Empty and click Add.
+     o	Name the controller DoorController.
+2.	Add Logic for the 20 Door Challenge:
+     o	In the DoorController.cs, add the following code:
+
+
+Step 4: Create the View
+1.	Add a View for Displaying the Doors:
+     o	Right-click on the Views folder, then the Door folder inside Views (if it doesn't exist, create it).
+     o	Select Add -> View.
+     o	Name the view Index.cshtml.
+2.	Create the HTML Layout to Display the Doors:
+     o	In Index.cshtml, add the following code to display the doors with their states (open or closed):
+
+
+Step 5: Set the Route in Program.cs (Optional for Older Versions)
+1.	Open Program.cs if you're using ASP.NET Core 3.x or earlier.
+2.	Add or check that the following lines are in the Configure method
+
+
+Step 6: Run the Application
+1.	Build the Project:
+     o	Click on Build -> Build Solution to ensure there are no errors.
+2.	Run the Application:
+     o	Press Ctrl + F5 (or click the "Play" button in Visual Studio) to run the application.
+     o	This will open the app in your browser.
