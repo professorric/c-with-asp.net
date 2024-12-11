@@ -14,4 +14,12 @@ After 5 passes on 5 doors, the states of the doors will change as follows:
 Door   	  Pass 1	  Pass 2	  Pass 3	  Pass 4	  Pass 5
 Door 1	  Open	    Open	    Open	    Open	    Open
 
+Explanation:
+•	Pass 1: All doors are toggled to open.
+•	Pass 2: Every second door is toggled (doors 2 and 4 are toggled).
+•	Pass 3: Every third door is toggled (door 3 is toggled).
+•	Pass 4: Every fourth door is toggled (door 4 is toggled).
+•	Pass 5: Every fifth door is toggled (door 5 is toggled).
+
+At the end, the doors that have been toggled an odd number of times will remain open, and those toggled an even number of times will remain closed.
 
