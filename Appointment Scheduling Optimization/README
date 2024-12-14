@@ -1,0 +1,2 @@
+•	Concept: Scheduling, Time Complexity
+•	Description: Given a list of patients and available time slots for doctors, design an algorithm to schedule appointments optimally (minimize waiting time for patients, while maximizing doctor availability).
