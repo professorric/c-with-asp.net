@@ -11,8 +11,11 @@ In this challenge:
 Example Output
 After 5 passes on 5 doors, the states of the doors will change as follows:
 
+1 = open
+0 = close
+
 Door   	  Pass 1	  Pass 2	  Pass 3	  Pass 4	  Pass 5
-Door 1	  Open	  Open	  Open	  Open	  Open
+Door 1	   1	        1	         1   	   1   	   1 
 
 Explanation:
 •	Pass 1: All doors are toggled to open.
