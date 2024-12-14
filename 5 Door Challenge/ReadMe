@@ -14,6 +14,8 @@ After 5 passes on 5 doors, the states of the doors will change as follows:
 1 = open
 0 = close
 
+Door 1: Pass 
+
 Door   	  Pass 1	  Pass 2	  Pass 3	  Pass 4	  Pass 5
 Door 1	   1	        1	         1   	   1   	   1 
 
