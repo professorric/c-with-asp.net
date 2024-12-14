@@ -1,0 +1,2 @@
+•	Concept: Dynamic Programming, Greedy Algorithms
+•	Description: A hospital has a limited number of beds and a variable number of patients arriving each day. Write an algorithm to allocate beds based on patient severity and hospital capacity, maximizing the number of patients treated.
