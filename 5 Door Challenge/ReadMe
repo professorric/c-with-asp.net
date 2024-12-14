@@ -1,3 +1,53 @@
+Hello Welcome to C# with ASP.NET Lesson. Today we will begin the week 0 of our lesson. first is we need to install necessary files just follow every steps I will shoow to you
+
+Step 1: Download the Installer:
+Go to the Visual Studio download page. ( https://visualstudio.microsoft.com/downloads/ ) 
+Choose the version of Visual Studio you want (e.g., Visual Studio Community, which is free).
+Click on "Download" to get the installer.
+
+Step 2: Install Visual Studio:
+Launch the installer.
+In the installer, check the box for ASP.NET and web development under the Workloads section.
+Also, check the box for .NET Core cross-platform development if you're planning to work with .NET Core (for cross-platform apps).
+You might also want to install Data Science and Analytical Applications if you're working on AI-related tasks.
+Click Install and wait for the installation to complete.
+
+Step 3: Install .NET SDK, Since you're working with ASP.NET, you need to install the .NET SDK.
+Go to the official Download .NET page and download the latest stable version of the .NET SDK. ( https://dotnet.microsoft.com/en-us/download )
+Once downloaded, run the installer to set up the SDK.
+
+Step 4:  Install SQL Server or Database
+Download SQL Server Express (free version): Visit SQL Server Downloads and download SQL Server 2019 Express Edition. ( https://www.microsoft.com/en-us/sql-server/sql-server-downloads )
+Install SQL Server: Run the installer and follow the steps to set up your SQL Server.
+Install SQL Server Management Studio (SSMS): You can also download SSMS for easier database management from SSMS download page.
+
+Step 5: Create a New ASP.NET Core Project
+Open Visual Studio.
+Select Create a new project.
+Choose ASP.NET Core Web Application.
+In the next window, choose Web API (if you're creating an API-based system) or MVC (if you're creating a full web app with views).
+Select .NET Core and ASP.NET Core 5.0 (or later) for the framework.
+Choose a name and location for your project.
+Click Create.
+
+Step 6: Install ML.NET (For AI Integration)
+Open NuGet Package Manager in Visual Studio.
+Search for Microsoft.ML and install it:
+Right-click your project in the Solution Explorer.
+Select Manage NuGet Packages.
+Search for Microsoft.ML and click Install.
+
+Step 7: 
+
+
+
+
+
+
+
+
+
+
 5 Door Challenge 
 The 5 Door Challenge is a simulation problem where a set of 5 doors is toggled multiple times based on a set of passes. Initially, all the doors are closed. In each pass, specific doors are toggled (opened or closed) based on the pass number. After completing all the passes, the doors that have been toggled an odd number of times will be open, while the doors toggled an even number of times will remain closed.
 
