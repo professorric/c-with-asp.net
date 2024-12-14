@@ -13,11 +13,11 @@ After 5 passes on 5 doors, the states of the doors will change as follows:
 
 
 Door Number	Pass 1	     Pass 2	     Pass 3	     Pass 4	     Pass 5
-Door 1	     Open	Open	Open	Open	Open
-Door 2	     Open	Closed	Closed	Closed	Closed
-Door 3	     Open	Open	Closed	Closed	Open
-Door 4	     Open	Open	Open	Closed	Closed
-Door 5	     Open	Open	Open	Open	Closed
+Door 1	        Open	      Open	     Open	          Open	Open
+Door 2	        Open	      Closed	     Closed	     Closed	Closed
+Door 3	        Open	      Open	     Closed	     Closed	Open
+Door 4	        Open	      Open	     Open	          Closed	Closed
+Door 5	        Open	      Open	     Open	          Open	Closed
 
 
 
