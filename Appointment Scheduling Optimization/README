@@ -1,6 +1,8 @@
 
                                      Step-by-Step Guide to Create a Scheduling System in Visual Studio
 
+Step 1: Create a Visual Studio Project
+
 We will build a simple scheduling system using ASP.NET Core MVC. This system will:
 
 1. Schedule patients to available doctor time slots.
@@ -17,10 +19,205 @@ Step 1: Create a Visual Studio Project
   • Choose a folder and click Create.
 
 
+Step 2: Set Up Models
+
+Create models for Patient, Doctor, and Appointment.
+
+Add the Models Folder:
+   • Right-click on the project, select Add > New Folder, and name it Models.
+Create Models:
+
+  • Patient.cs:
+
+namespace SchedulingSystem.Models
+{
+    public class Patient
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public DateTime ArrivalTime { get; set; } // Patient's arrival time
+    }
+}
+
+  • Doctor.cs:
+
+namespace SchedulingSystem.Models
+{
+    public class Doctor
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public List<DateTime> AvailableSlots { get; set; } = new List<DateTime>(); // Doctor's available time slots
+    }
+}
 
 
+  • Appointment.cs:
+
+namespace SchedulingSystem.Models
+{
+    public class Appointment
+    {
+        public int Id { get; set; }
+        public Patient Patient { get; set; }
+        public Doctor Doctor { get; set; }
+        public DateTime ScheduledTime { get; set; } // Time of the appointment
+    }
+}
 
 
+Step 3: Set Up the Controller
+
+Create a controller to handle scheduling logic.
+
+Add the Controller:
+  • Right-click on the Controllers folder, select Add > Controller, and choose MVC Controller - Empty.
+  • Name the controller ScheduleController.
+
+Implement Scheduling Logic:
+  • ScheduleController.cs:
+
+using Microsoft.AspNetCore.Mvc;
+using SchedulingSystem.Models;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace SchedulingSystem.Controllers
+{
+    public class ScheduleController : Controller
+    {
+        private static List<Patient> patients = new List<Patient>();
+        private static List<Doctor> doctors = new List<Doctor>();
+        private static List<Appointment> appointments = new List<Appointment>();
+
+        public ScheduleController()
+        {
+            // Initialize doctors and their time slots (mock data)
+            if (!doctors.Any())
+            {
+                doctors.Add(new Doctor
+                {
+                    Id = 1,
+                    Name = "Dr. Smith",
+                    AvailableSlots = new List<DateTime>
+                    {
+                        DateTime.Now.AddHours(1),
+                        DateTime.Now.AddHours(2),
+                        DateTime.Now.AddHours(3)
+                    }
+                });
+                doctors.Add(new Doctor
+                {
+                    Id = 2,
+                    Name = "Dr. Johnson",
+                    AvailableSlots = new List<DateTime>
+                    {
+                        DateTime.Now.AddHours(1.5),
+                        DateTime.Now.AddHours(2.5),
+                        DateTime.Now.AddHours(3.5)
+                    }
+                });
+            }
+        }
+
+        [HttpGet]
+        public IActionResult Index()
+        {
+            return View(appointments); // Show scheduled appointments
+        }
+
+        [HttpPost]
+        public IActionResult Schedule(Patient newPatient)
+        {
+            patients.Add(newPatient);
+
+            // Optimize scheduling
+            var optimalAppointment = SchedulePatient(newPatient);
+
+            if (optimalAppointment != null)
+            {
+                appointments.Add(optimalAppointment);
+                return RedirectToAction("Index");
+            }
+
+            return View("Error", "No available slots for this patient.");
+        }
+
+        private Appointment SchedulePatient(Patient patient)
+        {
+            // Minimize waiting time by finding the earliest available slot
+            var availableSlots = doctors
+                .SelectMany(d => d.AvailableSlots.Select(slot => new { Doctor = d, Slot = slot }))
+                .OrderBy(s => s.Slot)
+                .ToList();
+
+            var bestSlot = availableSlots.FirstOrDefault(s => s.Slot >= patient.ArrivalTime);
+
+            if (bestSlot != null)
+            {
+                // Remove the booked slot from the doctor's availability
+                bestSlot.Doctor.AvailableSlots.Remove(bestSlot.Slot);
+
+                return new Appointment
+                {
+                    Id = appointments.Count + 1,
+                    Patient = patient,
+                    Doctor = bestSlot.Doctor,
+                    ScheduledTime = bestSlot.Slot
+                };
+            }
+
+            return null; // No available slot
+        }
+    }
+}
+
+
+Step 4: Set Up Views
+
+Create views for displaying appointments and adding patients.
+
+Add Views Folder:
+  1. Create a folder named Schedule under the Views folder.
+
+Create Index View:
+  • Index.cshtml:
+
+@model List<SchedulingSystem.Models.Appointment>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scheduled Appointments</title>
+</head>
+<body>
+    <h1>Appointments</h1>
+    <table>
+        <tr>
+            <th>Patient</th>
+            <th>Doctor</th>
+            <th>Time</th>
+        </tr>
+        @foreach (var appointment in Model)
+        {
+            <tr>
+                <td>@appointment.Patient.Name</td>
+                <td>@appointment.Doctor.Name</td>
+                <td>@appointment.ScheduledTime</td>
+            </tr>
+        }
+    </table>
+
+    <h2>Schedule New Patient</h2>
+    <form method="post" asp-action="Schedule">
+        <label>Name:</label>
+        <input type="text" name="Name" required />
+        <label>Arrival Time:</label>
+        <input type="datetime-local" name="ArrivalTime" required />
+        <button type="submit">Schedule</button>
+    </form>
+</body>
+</html>
 
 
 
