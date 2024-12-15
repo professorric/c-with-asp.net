@@ -1,4 +1,4 @@
-                                                      Welcome to the AI-Based Predictive Healthcare Platform Course in ASP.NET and C#!
+                              Welcome to the AI-Based Predictive Healthcare Platform Course in ASP.NET and C#!
 
 Hello and welcome! I’m thrilled to have you join me on this exciting journey into the world of AI-driven healthcare solutions. Together, we’ll build a dynamic, real-world project that not only enhances your skills but also becomes a standout addition to your professional portfolio.
 
@@ -6,7 +6,7 @@ This course is designed to be hands-on and interactive, leveraging the power of 
 
 ======================================================================================================================================================================================================
 
-                                                                                      What You’ll Learn
+                                                      What You’ll Learn
 Core ASP.NET and C# Skills
 Build the foundation to create robust and scalable web applications.
 AI and Machine Learning Integration
@@ -18,7 +18,7 @@ By the end of this course, you’ll have a fully functional AI-based healthcare 
 
 ======================================================================================================================================================================================================
 
-                                                                                      How We’ll Work
+                                                       How We’ll Work
 GitHub
 Use GitHub to manage your code, track progress, and collaborate with peers. By the end of the course, you’ll have a professional repository showcasing your project.
 YouTube
@@ -28,7 +28,8 @@ Solve algorithmic problems inspired by real-world scenarios to lay the groundwor
 
 ======================================================================================================================================================================================================
 
-                                                                                    Why This Course Matters
+                                                        Why This Course Matters
+                                                        
 Healthcare is rapidly evolving, and technology is at the forefront of this transformation. By learning to build an AI-based Predictive Healthcare Platform, you’ll gain the skills to:
 
 Contribute to a future where technology makes healthcare more accessible, efficient, and personalized.
@@ -36,7 +37,7 @@ Create solutions that bridge the gap between healthcare professionals and patien
 
 ======================================================================================================================================================================================================
 
-                                                                              Getting Started: Step-by-Step Guide
+                                                        Getting Started: Step-by-Step Guide
 Step 1: Download Visual Studio
 Visit the Visual Studio download page. ( https://visualstudio.microsoft.com/downloads/ )
 Select Visual Studio Community (free version) or another edition of your choice.
@@ -80,7 +81,7 @@ Install SQL Server Management Studio (SSMS): You can also download SSMS for easi
 
 =================================================================================================================================================
 
-Let’s Get Started!
+                                                    Let’s Get Started!
 I’m excited to see the incredible projects you’ll create and the skills you’ll master. Together, let’s build something that not only demonstrates your technical expertise but also makes a meaningful impact in the field of healthcare.
 
 Let’s dive in and make this a rewarding learning experience! 🚀
