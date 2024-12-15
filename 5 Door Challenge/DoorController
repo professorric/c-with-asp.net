@@ -131,33 +131,40 @@ return View(doors): Passes the doors list to the Index view for rendering.
 
                                                     Toggle Action (HTTP POST)
 
+6. [HttpPost]
+public IActionResult Toggle()
+{
+    if (passCount < 5) // Check if we have passed less than 5 times
+    {
+        passCount++;
 
+        // Run the appropriate pass based on the count
+        for (int i = 1; i <= doors.Count; i++)
+        {
+            if (i % passCount == 0) // Toggle every 'passCount' door
+            {
+                doors[i - 1].IsOpen = !doors[i - 1].IsOpen; // Toggle the door state
+                doors[i - 1].State = doors[i - 1].IsOpen ? "Open" : "Close";
+            }
+        }
+    }
 
+    ViewData["PassCount"] = passCount;  // Display the current pass count
+    return View("Index", doors);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Purpose: Handles HTTP POST requests to toggle door states based on the current pass.
+Explanation:
+[HttpPost]: Indicates this action responds to POST requests.
+if (passCount < 5): Ensures the logic only runs for 5 passes.
+passCount++: Increments the pass count by 1.
+for (int i = 1; i <= doors.Count; i++): Iterates over all doors.
+if (i % passCount == 0): Checks if the door index is divisible by the current pass count.
+If true, the door state is toggled.
+doors[i - 1].IsOpen = !doors[i - 1].IsOpen: Reverses the IsOpen state (open → closed, or closed → open).
+doors[i - 1].State = doors[i - 1].IsOpen ? "Open" : "Close";: Updates the string representation of the door's state.
+ViewData["PassCount"] = passCount: Stores the current pass count in ViewData for display in the view.
+return View("Index", doors): Returns the updated doors list to the Index view.
 
 
 
