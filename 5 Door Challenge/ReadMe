@@ -21,23 +21,26 @@ Select .NET Core and ASP.NET Core 5.0 (or later) for the framework.
 Choose a name and location for your project.
 Click Create.
 
-Step 4: Install .NET SDK, Since you're working with ASP.NET, you need to install the .NET SDK.
-Go to the official Download .NET page and download the latest stable version of the .NET SDK. ( https://dotnet.microsoft.com/en-us/download )
-Once downloaded, run the installer to set up the SDK.
-
-Step 5:  Install SQL Server or Database
-Download SQL Server Express (free version): Visit SQL Server Downloads and download SQL Server 2019 Express Edition. ( https://www.microsoft.com/en-us/sql-server/sql-server-downloads )
-Install SQL Server: Run the installer and follow the steps to set up your SQL Server.
-Install SQL Server Management Studio (SSMS): You can also download SSMS for easier database management from SSMS download page.
-
-Step 6: Install ML.NET (For AI Integration)
+Step 4: Install ML.NET (For AI Integration)
 Open NuGet Package Manager in Visual Studio.
 Search for Microsoft.ML and install it:
 Right-click your project in the Solution Explorer.
 Select Manage NuGet Packages.
 Search for Microsoft.ML and click Install.
 
+=============================================  Leave for now Step 5 and 6   =====================================================================
 
+Step 5: Install .NET SDK, Since you're working with ASP.NET, you need to install the .NET SDK.
+Go to the official Download .NET page and download the latest stable version of the .NET SDK. ( https://dotnet.microsoft.com/en-us/download )
+Once downloaded, run the installer to set up the SDK.
+
+Step 6:  Install SQL Server or Database
+Download SQL Server Express (free version): Visit SQL Server Downloads and download SQL Server 2019 Express Edition. ( https://www.microsoft.com/en-us/sql-server/sql-server-downloads )
+Install SQL Server: Run the installer and follow the steps to set up your SQL Server.
+Install SQL Server Management Studio (SSMS): You can also download SSMS for easier database management from SSMS download page.
+
+
+=============================================Leave for now Step 4 and 5=====================================================================
 
 
 5 Door Challenge 
@@ -109,8 +112,9 @@ Step 3: Create the Controller
 Step 4: Create the View
 1.	Add a View for Displaying the Doors:
      o	Right-click on the Views folder, then the Door folder inside Views (if it doesn't exist, create it).
-     o	Select Add -> View.
+     o	Select Add -> View -> Razor View .
      o	Name the view Index.cshtml.
+
 2.	Create the HTML Layout to Display the Doors:
      o	In Index.cshtml, add the following code to display the doors with their states (open or closed):
 
@@ -121,8 +125,10 @@ Step 5: Set the Route in Program.cs (Optional for Older Versions)
 
 
 Step 6: Run the Application
+
 1.	Build the Project:
      o	Click on Build -> Build Solution to ensure there are no errors.
+
 2.	Run the Application:
      o	Press Ctrl + F5 (or click the "Play" button in Visual Studio) to run the application.
      o	This will open the app in your browser.
