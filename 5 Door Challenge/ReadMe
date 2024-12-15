@@ -17,7 +17,7 @@ Door Number	Pass 1	     Pass 2	     Pass 3	     Pass 4	     Pass 5
 Door 1	        Open	      Open	     Open	     Open	     Open
 Door 2	        Open	      Closed	     Closed	     Closed	     Closed
 Door 3	        Open	      Open	     Closed	     Closed	     Closed
-Door 4	        Open	      Closed	     Closed	Open 	     Closed
+Door 4	        Open	      Closed	     Closed	 Open 	      Open
 Door 5	        Open	      Open	     Open	     Open	     Closed
 
 Explanation:
