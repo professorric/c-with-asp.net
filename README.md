@@ -4,7 +4,7 @@ Hello and welcome! I’m thrilled to have you join me on this exciting journey i
 
 This course is designed to be hands-on and interactive, leveraging the power of GitHub for version control and collaboration, and YouTube for supplemental tutorials and walkthroughs. Whether your goal is to sharpen your ASP.NET and C# expertise or to explore the transformative potential of AI in healthcare, this course will provide valuable learning opportunities.
 
-======================================================================================================================================================================================================
+
 
                                                       What You’ll Learn
 Core ASP.NET and C# Skills
@@ -16,7 +16,7 @@ Create interactive and user-friendly interfaces for health management and appoin
 Portfolio-Ready Project
 By the end of this course, you’ll have a fully functional AI-based healthcare platform to showcase to potential employers or clients.
 
-======================================================================================================================================================================================================
+
 
                                                        How We’ll Work
 GitHub
@@ -26,16 +26,15 @@ Access exclusive video content to reinforce key concepts, provide step-by-step g
 Real-World Challenges
 Solve algorithmic problems inspired by real-world scenarios to lay the groundwork for our final project.
 
-======================================================================================================================================================================================================
 
-                                                        Why This Course Matters
+
+                                                       Why This Course Matters
                                                         
 Healthcare is rapidly evolving, and technology is at the forefront of this transformation. By learning to build an AI-based Predictive Healthcare Platform, you’ll gain the skills to:
 
 Contribute to a future where technology makes healthcare more accessible, efficient, and personalized.
 Create solutions that bridge the gap between healthcare professionals and patients, improving lives through innovation.
 
-======================================================================================================================================================================================================
 
                                                         Getting Started: Step-by-Step Guide
 Step 1: Download Visual Studio
@@ -67,7 +66,7 @@ Right-click your project in the Solution Explorer.
 Select Manage NuGet Packages.
 Search for Microsoft.ML and click Install.
 
-=============================================  Steps to Be Covered Later   =====================================================================
+                                                      Steps to Be Covered Later   
 
 Step 5: Install .NET SDK, Since you're working with ASP.NET, you need to install the .NET SDK.
 Go to the official Download .NET page and download the latest stable version of the .NET SDK. ( https://dotnet.microsoft.com/en-us/download )
@@ -79,7 +78,7 @@ Install SQL Server: Run the installer and follow the steps to set up your SQL Se
 Install SQL Server Management Studio (SSMS): You can also download SSMS for easier database management from SSMS download page.
 
 
-=================================================================================================================================================
+=
 
                                                     Let’s Get Started!
 I’m excited to see the incredible projects you’ll create and the skills you’ll master. Together, let’s build something that not only demonstrates your technical expertise but also makes a meaningful impact in the field of healthcare.
