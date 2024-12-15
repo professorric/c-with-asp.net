@@ -39,7 +39,7 @@ Step-by-Step Guide on How to Implement the 5 Door Challenge in ASP.NET Core MVC 
 
 Step 1: Create a New ASP.NET Core MVC Project
 1.	Open Visual Studio:
-     o	If you don't have Visual Studio installed, you can download it from here.
+     o	If you don't have Visual Studio installed, you can download it.
 2.	Create a New Project:
      o	Select Create a new project.
      o	Choose ASP.NET Core Web Application.
