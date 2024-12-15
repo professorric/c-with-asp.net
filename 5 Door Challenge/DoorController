@@ -49,3 +49,118 @@ namespace _20doorchallenge.Controllers
         }
     }
 }
+
+
+
+                                                    Namespace Declaration
+
+1. using Microsoft.AspNetCore.Mvc;
+   using _20doorchallenge.Models;
+
+Purpose: Imports required namespaces.
+Explanation:
+Microsoft.AspNetCore.Mvc: Provides classes and features for building MVC web applications, including Controller, IActionResult, and more.
+_20doorchallenge.Models: Includes the Door model class, which represents the state of individual doors.
+
+
+
+                                                    Namespace and Class Declaration
+
+2. namespace _20doorchallenge.Controllers
+{
+    public class DoorController : Controller
+
+Purpose: Defines a namespace (_20doorchallenge.Controllers) and a controller class (DoorController).
+Explanation:
+namespace _20doorchallenge.Controllers: Organizes the controller logic for the 20doorchallenge application.
+public class DoorController : Controller:
+This class inherits from Controller, making it an MVC controller capable of handling HTTP requests and returning views or data.
+
+
+
+                                                    Static Variables
+
+3. private static List<Door> doors = new List<Door>();
+   private static int passCount = 0;
+
+Purpose: Stores the state of doors and tracks the number of passes.
+Explanation:
+doors: A static list of Door objects representing the 5 doors in the challenge.
+static ensures the list persists across requests.
+passCount: Tracks the current pass number (starting at 0).
+
+
+
+                                                    Constructor
+
+4. public DoorController()
+{
+    // Initialize the doors (only needed once when the app starts)
+    if (doors.Count == 0)
+    {
+        for (int i = 1; i <= 5; i++)  // Initialize only 5 doors
+        {
+            doors.Add(new Door { IsOpen = false, State = "Close" });
+        }
+    }
+}
+
+Purpose: Initializes the doors list with 5 doors, each initially closed.
+Explanation:
+The DoorController constructor is called when the controller is instantiated.
+if (doors.Count == 0): Ensures initialization only happens once (avoids reinitialization on every request).
+for (int i = 1; i <= 5; i++): Loops 5 times to create 5 Door objects.
+doors.Add(new Door { IsOpen = false, State = "Close" }): Adds a closed door to the doors list.
+
+
+
+                                                    Index Action (HTTP GET)
+
+5. [HttpGet]
+public IActionResult Index()
+{
+    return View(doors); // Return the doors state to the view
+}
+
+Purpose: Handles HTTP GET requests to display the doors and their states.
+Explanation:
+[HttpGet]: Indicates this action responds to GET requests.
+IActionResult: The return type for actions that provide a response.
+return View(doors): Passes the doors list to the Index view for rendering.
+
+
+                                                    Toggle Action (HTTP POST)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
