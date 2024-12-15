@@ -1,2 +1,29 @@
+
+                                     Step-by-Step Guide to Create a Scheduling System in Visual Studio
+
+We will build a simple scheduling system using ASP.NET Core MVC. This system will:
+
+1. Schedule patients to available doctor time slots.
+2. Optimize scheduling to minimize patient waiting time and maximize doctor availability.
+3. Demonstrate basic time complexity considerations in the algorithm.
+
+Step 1: Create a Visual Studio Project
+1. Open Visual Studio:
+   • Go to File > New > Project.
+
+2. Select ASP.NET Core Web App (Model-View-Controller):
+  • Choose .NET 6 or later.
+  • Name the project: SchedulingSystem.
+  • Choose a folder and click Create.
+
+
+
+
+
+
+
+
+
+
 •	Concept: Scheduling, Time Complexity
 •	Description: Given a list of patients and available time slots for doctors, design an algorithm to schedule appointments optimally (minimize waiting time for patients, while maximizing doctor availability).
