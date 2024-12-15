@@ -1,6 +1,9 @@
 
 5 Door Challenge 
-The 5 Door Challenge is a simulation problem where a set of 5 doors is toggled multiple times based on a set of passes. Initially, all the doors are closed. In each pass, specific doors are toggled (opened or closed) based on the pass number. After completing all the passes, the doors that have been toggled an odd number of times will be open, while the doors toggled an even number of times will remain closed.
+The 5 Door Challenge is a simulation problem where a set of 5 doors is toggled multiple times based on a set of passes. Initially, 
+all the doors are closed. In each pass, specific doors are toggled (opened or closed) based on the pass number. After completing all 
+the passes, the doors that have been toggled an odd number of times will be open, while the doors toggled an even number of times will 
+remain closed.
 
 In this challenge:
 •	Pass 1 toggles every door.
