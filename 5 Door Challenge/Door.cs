@@ -11,6 +11,7 @@ namespace _20doorchallenge.Models
 
                                                         Namespace Declaration
 
+
 1. namespace _20doorchallenge.Models
 Purpose: This declares the namespace for the Door class.
 Explanation:
@@ -18,14 +19,18 @@ A namespace is a container for classes and other types, helping organize code an
 _20doorchallenge.Models suggests this is part of the 20doorchallenge project and specifically contains 
 models (data structures) used in the application.
 
+    
                                                         Class Declaration
+                                                        
 2. public class Door
 Purpose: Defines a public class named Door.
 Explanation:
 public means this class can be accessed from other parts of the application.
 A class is a blueprint for creating objects. Here, it represents a "door" with specific properties.
 
+    
                                                        Property: IsOpen
+                                                       
 3. public bool IsOpen { get; set; }
 Purpose: Represents whether the door is open or closed.
 Explanation:
@@ -36,7 +41,10 @@ This property stores the state of the door:
 true means the door is open.
 false means the door is closed.
 
+    
                                                         Property: State
+
+                                                        
 4. public string State { get; set; } = "close";
 Purpose: Represents the string representation of the door's state, either "open" or "close".
 Explanation:
