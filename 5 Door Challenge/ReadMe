@@ -73,7 +73,7 @@ Step 3: Create the Controller
 Step 4: Create the View
 1.	Add a View for Displaying the Doors:
      o	Right-click on the Views folder, then the Door folder inside Views (if it doesn't exist, create it).
-     o	Select Add -> View -> Razor View .
+     o	Select Add -> View -> Razor View - Empty .
      o	Name the view Index.cshtml.
 
 2.	Create the HTML Layout to Display the Doors:
