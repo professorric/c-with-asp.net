@@ -1,3 +1,6 @@
+                                                    How to Navigate on the Project
+  Visit: https://youtu.be/XiMlon8TBEs
+                              
                               Welcome to the AI-Based Predictive Healthcare Platform Course in ASP.NET and C#!
 
 Hello and welcome! I’m thrilled to have you join me on this exciting journey into the world of AI-driven healthcare solutions. Together, we’ll build a dynamic, real-world project that not only enhances your skills but also becomes a standout addition to your professional portfolio.
@@ -65,6 +68,9 @@ Search for Microsoft.ML and install it:
 Right-click your project in the Solution Explorer.
 Select Manage NuGet Packages.
 Search for Microsoft.ML and click Install.
+
+Watch: https://youtu.be/2pHd4Um_W_c
+
 
                                                       Steps to Be Covered Later   
 
