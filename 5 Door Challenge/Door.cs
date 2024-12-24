@@ -1,4 +1,4 @@
-namespace _20doorchallenge.Models    
+namespace _20doorchallenge.Models    (watch here: https://youtu.be/F8uUanVILsk?si=rBOdNEMTrBdEaCJr )
 {
     public class Door
     {
