@@ -1,4 +1,4 @@
-namespace _20doorchallenge.Models    ( watch here: https://youtu.be/F8uUanVILsk?si=d6QPbP3DUQh3IxC_    )
+namespace _20doorchallenge.Models    
 {
     public class Door
     {
@@ -7,7 +7,7 @@ namespace _20doorchallenge.Models    ( watch here: https://youtu.be/F8uUanVILsk?
     }
 }
 
-
+https://youtu.be/F8uUanVILsk?si=d6QPbP3DUQh3IxC_
 
                                                         Namespace Declaration
 
