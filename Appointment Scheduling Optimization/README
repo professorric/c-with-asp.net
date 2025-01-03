@@ -1,22 +1,72 @@
+                      Welcome to Week 1 of ASP.NET Today topic is Appointment Scheduling Optimization 
 
-                                     Step-by-Step Guide to Create a Scheduling System in Visual Studio
-
-Step 1: Create a Visual Studio Project
-
-We will build a simple scheduling system using ASP.NET Core MVC. This system will:
-
+Goal: 
 1. Schedule patients to available doctor time slots.
 2. Optimize scheduling to minimize patient waiting time and maximize doctor availability.
 3. Demonstrate basic time complexity considerations in the algorithm.
 
-Step 1: Create a Visual Studio Project
-1. Open Visual Studio:
-   • Go to File > New > Project.
+Step 2: Set Up Models Patience, Doctor and Appointment 
 
-2. Select ASP.NET Core Web App (Model-View-Controller):
-  • Choose .NET 6 or later.
-  • Name the project: SchedulingSystem.
-  • Choose a folder and click Create.
+=====================================================================================
+Patience.cs
+
+namespace AppointmentScheduling.Models
+{
+    public class Patient
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public DateTime ArrivalTime { get; set; } // Patient's arrival time
+    }
+}
+=====================================================================================
+
+=====================================================================================
+Doctor.cs
+
+namespace AppointmentScheduling.Models
+{
+    public class Doctor
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public List<DateTime> AvailableSlots { get; set; } = new List<DateTime>(); // Doctor's available time slots
+    }
+}
+
+=====================================================================================
+
+=====================================================================================
+Appointment.cs
+
+namespace AppointmentScheduling.Models
+{
+    public class Appointment
+    {
+        public int Id { get; set; }
+        public Patient Patient { get; set; }
+        public Doctor Doctor { get; set; }
+        public DateTime ScheduledTime { get; set; } // Time of the appointment
+    }
+}
+
+=====================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+===========================================================================================================================================
+
+
 
 
 Step 2: Set Up Models
