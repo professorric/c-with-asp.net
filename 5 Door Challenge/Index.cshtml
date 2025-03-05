@@ -1,0 +1,23 @@
+﻿@model VoteViewModel
+
+<h2>Vote for Your Favorite Programming Language</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationMessageFor(m => m.SelectedOption, "", new { @class = "text-danger" })
+    <br />
+    <label>@Html.RadioButtonFor(m => m.SelectedOption, "C#") C#</label>
+    <br />
+    <label>@Html.RadioButtonFor(m => m.SelectedOption, "Java") Java</label>
+    <br />
+    <label>@Html.RadioButtonFor(m => m.SelectedOption, "Python") Python</label>
+    <br />
+
+    <button type="submit">Submit</button>
+}
+
+@if (Model != null && !string.IsNullOrEmpty(Model.SelectedOption))
+{
+    <p>You voted for: <strong>@Model.SelectedOption</strong></p>
+}
+<a href="/Vote/Results">View Results</a>
